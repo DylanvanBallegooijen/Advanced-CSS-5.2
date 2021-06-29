@@ -1,0 +1,53 @@
+@import "./constants";
+
+
+.grid {
+  position: relative;
+  min-height: 50%;
+  background-color: $grey;
+  margin:20px;
+  padding:20px;
+  display:-ms-grid;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  overflow: auto;
+  gap: 0.7em;
+
+  .portfolio {
+    position: relative;
+    gap: 0.7em;
+    margin: 1em;
+    img {
+      box-shadow: 0 4px 8px 0 rgb(44, 44, 44);
+      transition:4s;
+      width: 100%;
+      height: 100%;
+      display: -ms-grid;
+      border-radius: 30px;
+      object-fit: cover;
+      
+    }
+  }
+}
+.button {
+  position: absolute;
+  opacity: 0;
+  top: 50%;
+  right: 35%;
+  align-items: center;
+  text-decoration: none;
+  text-align: center;
+  background-color: rgb(68, 68, 192);
+  border: 1px solid rgb (68, 68, 192);
+  padding: 0.7em;
+  color: white;
+  border-radius: 10px;
+}
+.portfolio:hover .image {
+  opacity: 0;
+}
+.portfolio:hover .button {
+  opacity: 1;
+  
+}
+
